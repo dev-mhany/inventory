@@ -1,3 +1,8 @@
+// types/index.ts
+
+// ---------------------------------
+// 1. Authentication & Roles
+// ---------------------------------
 export type UserRole = 'editor' | 'viewer'
 
 export interface AuthUser {
@@ -8,6 +13,9 @@ export interface AuthUser {
   photoURL?: string
 }
 
+// ---------------------------------
+// 2. Product
+// ---------------------------------
 export interface Product {
   id: string
   code: string | number
@@ -21,6 +29,9 @@ export interface Product {
   updatedAt?: string
 }
 
+// ---------------------------------
+// 3. Warehouse
+// ---------------------------------
 export interface Warehouse {
   id: string
   name: string
@@ -30,6 +41,9 @@ export interface Warehouse {
   updatedAt?: string
 }
 
+// ---------------------------------
+// 4. Business Partner
+// ---------------------------------
 export type BusinessPartnerType = 'vendor' | 'client' | 'both'
 
 export interface BusinessPartner {
@@ -45,6 +59,9 @@ export interface BusinessPartner {
   updatedAt?: string
 }
 
+// ---------------------------------
+// 5. Batch
+// ---------------------------------
 export interface Batch {
   id: string
   productCode: string | number
@@ -61,6 +78,9 @@ export interface Batch {
   updatedAt?: string
 }
 
+// ---------------------------------
+// 6. Transaction
+// ---------------------------------
 export type TransactionType = 'import' | 'export'
 
 export interface TransactionItem {
@@ -83,6 +103,9 @@ export interface Transaction {
   updatedAt?: string
 }
 
+// ---------------------------------
+// 7. (Optional) Aggregated Inventory
+// ---------------------------------
 export interface Inventory {
   id: string
   productCode: string | number
